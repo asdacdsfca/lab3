@@ -15,4 +15,20 @@ public class ArrayTests {
     int[] input1 = { };
     assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
   }
+
+  @Test
+  public void testReverseInPlace2(){
+    int[] input2 = { };
+    ArrayExamples.reverseInPlace(input2);
+    assertArrayEquals(new int[]{ }, input2);
+  }
+
+  @Test
+  public void testReversed2(){
+    int[] input2 = { -2, -3, -4};
+    ArrayExamples.reverseInPlace(input2);
+    assertArrayEquals(new int[]{ -4, -3, -2}, input2);
+  } //It changes the element to be the one in its reversed index, however, it doesn't change the
+  //element in its reversed index to the element we are changing. Ex.after the first round this becomes{-4, -3, -4}
+  
 }
