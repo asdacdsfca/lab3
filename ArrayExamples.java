@@ -15,10 +15,12 @@ public class ArrayExamples {
   // order
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
-    for(int i = 0; i < arr.length; i += 1) {
-      arr[i] = newArray[arr.length - i - 1];
+    int indexA = 0;
+    for(int i = arr.length-1; i >= 0; i --) {
+      newArray[indexA] = arr[i];
+      indexA++;
     }
-    return arr;
+    return newArray;
   }
 
   // Averages the numbers in the array (takes the mean), but leaves out the
